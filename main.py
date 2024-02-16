@@ -6,6 +6,9 @@ from PIL import Image
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Welcome to the image processing service!"
 
 @app.route('/process_image', methods=['POST'])
 def process_image():
